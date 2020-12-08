@@ -1,0 +1,235 @@
+@import "layout";
+
+.header {
+  background-color: $primary-red;
+  padding: 0 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .title {
+    img {
+      margin: 30px 0;
+      width: 80px;
+    }
+  }
+  .menu {
+    display: flex;
+    li {
+      a {
+        font-size: 20px;
+        line-height: 1.5;
+        color: $text-white;
+        padding: 0 32px;
+        display:block;
+      }
+      &:first-child a{
+        padding-left: 0;
+      }
+      &:last-child a{
+        padding-right: 0;
+      }
+    }
+  }
+  @include pad {
+    padding: 0 39px;
+  }
+  @include phone {
+    flex-direction: column;
+    padding: 0;
+    .title {
+      img {
+        width: 48px;
+        margin: 10px 0;
+      }
+    }
+    .menu {
+      flex-wrap: wrap;
+      width: 100%;
+      li {
+        padding: 7px 0;
+        width: 50%;
+        box-sizing: border-box;
+        margin-right: 0;
+        text-align: center;
+        border: 1px solid #fff;
+      }
+      li:hover {
+        background-color: #fff;
+        a {
+          color: $primary-red;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $primary-red;
+  padding: 36px 0 28px;
+  @include phone {
+    padding: 22px 15px;
+  }
+}
+
+.contacts {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  .page-links {
+    display: flex;
+    margin-bottom: 36px;
+    li {
+      a {
+        font-size: 16px;
+        line-height: 1.5;
+        color: $text-white;
+        display: block;
+        padding: 0 24px;
+      }
+      &:first-child a {
+        padding-left: 0;
+      }
+    }
+    @include pad {
+      margin-bottom: 24px;
+    }
+    @include phone {
+      display: none;
+    }
+  }
+  .phone-email {
+    display: flex;
+    flex-direction: column;
+    li {
+      display: flex;
+      align-items: center;
+      img {
+        width: 44px;
+        margin-right: 12px;
+      }
+      a {
+        color: $text-white;
+        font-size: 36px;
+        line-height: 1.5;
+      }
+      @include pad {
+        img {
+          width: 24px;
+        }
+        a {
+          font-size: 20px;
+        }
+      }
+      @include phone {
+        img {
+          width: 20px;
+          margin-right: 5px;
+        }
+        a {
+          font-size: 16px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+  .sns-icons {
+    display: flex;
+    li {
+      margin-left: 32px;
+      &:first-child {
+        margin-left: 0;
+      }
+      a {
+        display: block;
+      }
+      @include pad {
+        margin-left: 24px;
+        a img {
+          width: 24px;
+        }
+      }
+      @include phone {
+        margin-left: 24px;
+      }
+    }
+  }
+}
+
+.copyright {
+  padding-top: 24px;
+  @include phone {
+    padding-top: 18px;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo-copyright {
+      display: flex;
+      align-items: center;
+      img {
+        width: 80px;
+        margin-right: 38px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: $text-white;
+      }
+      @include pad {
+        img {
+          display: none;
+        }
+      }
+    }
+    @include phone {
+      position: relative;
+      .logo-copyright img {
+        margin-right: 0;
+        display: inline;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    .icon-content {
+      ul {
+        display: flex;
+        li {
+          margin-left: 62px;
+          a {
+            font-size: 14px;
+            line-height: 1.5;
+            color: $text-white;
+          }
+          @include pad {
+            margin-left: 24px;
+          }
+        }
+      }
+    }
+    @include phone {
+      flex-direction: column;
+      align-items: start;
+      .logo-copyright {
+        margin-bottom: 7px;
+        p {
+          font-size: 14px;
+        }
+      }
+      .icon-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        ul {
+          flex-direction: column;
+          li {
+            margin-left: 0;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+}
